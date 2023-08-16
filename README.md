@@ -1,1 +1,1 @@
-a simple admin dashboard design
+a simple admin dashboard design created with React
