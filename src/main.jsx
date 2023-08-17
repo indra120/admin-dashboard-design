@@ -1,5 +1,5 @@
 import { App } from './app'
-import './index.css'
+import './index.scss'
 import { createRoot } from 'react-dom/client'
 import { StrictMode } from 'react'
 
