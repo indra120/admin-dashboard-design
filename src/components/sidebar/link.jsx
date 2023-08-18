@@ -1,3 +1,5 @@
+import styles from '@/styles/sidebar.module.scss'
+
 /**
  * @param {Object} props
  * @param {(string|URL)} props.href
@@ -8,7 +10,7 @@
  */
 export function SidebarLink({ href = '#', title, active, icon: Icon, children, ...props }) {
   return (
-    <a href={href} className={active ? 'active' : undefined} {...props}>
+    <a href={href} className={`${styles.link} ${active ? styles.active : ''}`} {...props}>
       <Icon />
       <h3>{title}</h3>
       {children}
