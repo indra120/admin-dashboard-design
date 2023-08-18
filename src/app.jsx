@@ -3,6 +3,7 @@ import { Analytics } from '@/components/analytics'
 import { NewUser } from '@/components/new-user'
 import { RecentOrders } from '@/components/recent-orders'
 import { Navbar } from '@/components/navbar'
+import { UserProfile } from '@/components/user-profile'
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
 
       <div className="right-section">
         <Navbar />
+        <UserProfile />
       </div>
     </div>
   )
