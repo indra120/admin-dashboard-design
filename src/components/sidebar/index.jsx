@@ -1,5 +1,5 @@
-import { SidebarLink } from './sidebar-link'
-import { SidebarToggle } from './sidebar-toggle'
+import { SidebarLink } from './link'
+import { SidebarToggle } from './toggle'
 import * as Icon from 'react-icons/md'
 
 export function Sidebar() {
