@@ -301,4 +301,40 @@ main {
       stroke-dasharray: 200;
     }
   }
+
+  .new-users {
+    margin-top: 1.3rem;
+
+    .user-list {
+      background-color: var(--color-white);
+      padding: var(--card-padding);
+      border-radius: var(--card-border-radius);
+      margin-top: 1rem;
+      box-shadow: var(--box-shadow);
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .user img {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 0.4rem;
+        border-radius: 50%;
+      }
+    }
+  }
 }
