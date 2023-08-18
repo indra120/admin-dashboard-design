@@ -7,7 +7,7 @@ export function SidebarToggle() {
       <section className="logo">
         <img src={logo} alt="" />
         <h2>
-          Freq<span className="danger">Seeker</span>
+          React<span className="primary">JS</span>
         </h2>
       </section>
 

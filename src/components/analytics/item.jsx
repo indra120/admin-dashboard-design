@@ -7,16 +7,16 @@
 export function AnalyticItem({ title, subTitle, percentage, ...props }) {
   return (
     <div {...props}>
-      <div class="status">
-        <div class="info">
+      <div className="status">
+        <div className="info">
           <h3>{title}</h3>
           <h1>{subTitle}</h1>
         </div>
-        <div class="progresss">
+        <div className="progresss">
           <svg>
             <circle cx="38" cy="38" r="36"></circle>
           </svg>
-          <div class="percentage">
+          <div className="percentage">
             <p>{percentage}%</p>
           </div>
         </div>
