@@ -1,0 +1,17 @@
+@mixin maxWidth($size: 768px) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include maxWidth {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include maxWidth(1200px) {
+    @content;
+  }
+}
