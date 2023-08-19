@@ -1,4 +1,5 @@
 import { MdAdd, MdEdit, MdMoreVert, MdVolumeUp } from 'react-icons/md'
+import styles from '@/styles/reminders.module.scss'
 
 /**
  * @param {Object} props
@@ -10,18 +11,20 @@ import { MdAdd, MdEdit, MdMoreVert, MdVolumeUp } from 'react-icons/md'
 export function Notification({ deactive, addReminder, title, time }) {
   return (
     <div
-      className={`notification${
-        deactive ? ' deactive' : addReminder ? ' add-reminder' : ''
+      className={`${styles.notification} ${
+        deactive ? styles.deactive : addReminder ? styles.addReminder : ''
       }`}
     >
       {!addReminder ? (
         <>
-          <div className="icon">{deactive ? <MdEdit /> : <MdVolumeUp />}</div>
+          <div className={styles.icon}>
+            {deactive ? <MdEdit /> : <MdVolumeUp />}
+          </div>
 
-          <div className="content">
-            <div className="info">
+          <div className={styles.content}>
+            <div>
               <h3>{title}</h3>
-              <small className="text_muted">{time}</small>
+              <small className="text-muted">{time}</small>
             </div>
 
             <MdMoreVert />

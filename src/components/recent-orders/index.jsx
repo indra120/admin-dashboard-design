@@ -1,8 +1,9 @@
 import { Order } from './order'
+import styles from '@/styles/recent-orders.module.scss'
 
 export function RecentOrders() {
   return (
-    <div className="recent-orders">
+    <div className={styles.recentOrders}>
       <h2>Recent Orders</h2>
       <table>
         <thead>

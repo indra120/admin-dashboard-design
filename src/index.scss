@@ -1,3 +1,4 @@
+@use './styles/viewport';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -128,121 +129,6 @@ aside {
 main {
   margin-top: 1.4rem;
 
-  .analytics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
-
-    > div {
-      background-color: var(--color-white);
-      padding: var(--card-padding);
-      border-radius: var(--card-border-radius);
-      margin-top: 1rem;
-      box-shadow: var(--box-shadow);
-      cursor: pointer;
-      transition: all 0.3s ease;
-
-      &:hover {
-        box-shadow: none;
-      }
-
-      .status {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-
-    h3 {
-      margin-left: 0.6rem;
-      font-size: 1rem;
-    }
-
-    .progresss {
-      position: relative;
-      width: 92px;
-      height: 92px;
-      border-radius: 50%;
-
-      .percentage {
-        position: absolute;
-        top: -3px;
-        left: -1px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    svg {
-      width: 7rem;
-      height: 7rem;
-
-      circle {
-        fill: none;
-        stroke-width: 10;
-        stroke-linecap: round;
-        transform: translate(5px, 5px);
-      }
-    }
-
-    .sales svg circle {
-      stroke: var(--color-success);
-      stroke-dashoffset: -30;
-      stroke-dasharray: 200;
-    }
-
-    .visits svg circle {
-      stroke: var(--color-danger);
-      stroke-dashoffset: -30;
-      stroke-dasharray: 200;
-    }
-
-    .searches svg circle {
-      stroke: var(--color-primary);
-      stroke-dashoffset: -30;
-      stroke-dasharray: 200;
-    }
-  }
-
-  .new-users {
-    margin-top: 1.3rem;
-
-    .user-list {
-      background-color: var(--color-white);
-      padding: var(--card-padding);
-      border-radius: var(--card-border-radius);
-      margin-top: 1rem;
-      box-shadow: var(--box-shadow);
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-
-      &:hover {
-        box-shadow: none;
-      }
-
-      .user {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .user img {
-        width: 5rem;
-        height: 5rem;
-        margin-bottom: 0.4rem;
-        border-radius: 50%;
-      }
-    }
-  }
-
   table {
     tbody {
       td {
@@ -256,86 +142,61 @@ main {
       }
     }
   }
-
-  .recent-orders {
-    margin-top: 1.3rem;
-
-    h2 {
-      margin-bottom: 0.8rem;
-    }
-
-    table {
-      background-color: var(--color-white);
-      width: 100%;
-      padding: var(--card-padding);
-      text-align: center;
-      box-shadow: var(--box-shadow);
-      border-radius: var(--card-border-radius);
-      transition: all 0.3s ease;
-
-      &:hover {
-        box-shadow: none;
-      }
-    }
-
-    a {
-      text-align: center;
-      display: block;
-      margin: 1rem auto;
-      color: var(--color-primary);
-    }
-  }
 }
 
 .right-section {
   margin-top: 1.4rem;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
+@include viewport.desktop {
+  .container {
+    width: 95%;
+    grid-template-columns: 7rem auto 23rem;
+  }
 
-    button {
-      display: none;
-    }
-
-    .profile {
-      display: flex;
-      gap: 2rem;
-      text-align: right;
-
-      .profile-photo {
-        width: 2.8rem;
-        height: 2.8rem;
-        border-radius: 50%;
-        overflow: hidden;
+  main table thead tr {
+    th,
+    td {
+      &:last-child,
+      &:first-child {
+        display: none;
       }
     }
   }
+}
 
-  .dark-mode {
-    background-color: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--border-radius-1);
+@include viewport.mobile {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 0 var(--padding-1);
+  }
 
-    svg {
-      font-size: 1.2rem;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  aside {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 15rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    left: -100%;
+    display: none;
+    animation: showMenu 0.4s ease forwards;
+  }
 
-      &.active {
-        background-color: var(--color-primary);
-        color: white;
-        border-radius: var(--border-radius-1);
-      }
+  @keyframes showMenu {
+    to {
+      left: 0;
     }
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  .right-section {
+    width: 94%;
+    margin: 0 auto 4rem;
   }
 }

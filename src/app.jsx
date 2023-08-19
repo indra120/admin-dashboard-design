@@ -1,6 +1,6 @@
 import { Sidebar } from '@/components/sidebar'
 import { Analytics } from '@/components/analytics'
-import { NewUser } from '@/components/new-user'
+import { NewUsers } from '@/components/new-users'
 import { RecentOrders } from '@/components/recent-orders'
 import { Navbar } from '@/components/navbar'
 import { UserProfile } from '@/components/user-profile'
@@ -13,7 +13,7 @@ export function App() {
 
       <main>
         <Analytics />
-        <NewUser />
+        <NewUsers />
         <RecentOrders />
       </main>
 

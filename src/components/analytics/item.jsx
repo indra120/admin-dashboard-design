@@ -1,3 +1,5 @@
+import styles from '@/styles/analytics.module.scss'
+
 /**
  * @param {Object} props
  * @param {string} props.title
@@ -7,16 +9,16 @@
 export function AnalyticItem({ title, subTitle, percentage, ...props }) {
   return (
     <div {...props}>
-      <div className="status">
-        <div className="info">
+      <div className={styles.status}>
+        <div>
           <h3>{title}</h3>
           <h1>{subTitle}</h1>
         </div>
-        <div className="progresss">
+        <div className={styles.progresss}>
           <svg>
             <circle cx="38" cy="38" r="36"></circle>
           </svg>
-          <div className="percentage">
+          <div className={styles.percentage}>
             <p>{percentage}%</p>
           </div>
         </div>

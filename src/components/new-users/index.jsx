@@ -1,10 +1,11 @@
 import { User } from './user'
+import styles from '@/styles/new-users.module.scss'
 
-export function NewUser() {
+export function NewUsers() {
   return (
-    <div className="new-users">
+    <div className={styles.newUsers}>
       <h2>New Users</h2>
-      <div className="user-list">
+      <div className={styles.userList}>
         {users.map((user, i) => <User key={i} {...user} />)}
 
         <User image="images/plus.png" name="More" caption="New User" />

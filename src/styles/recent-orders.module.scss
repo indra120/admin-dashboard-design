@@ -1,0 +1,53 @@
+@use 'viewport';
+
+.recent-orders {
+  margin-top: 1.3rem;
+
+  h2 {
+    margin-bottom: 0.8rem;
+  }
+
+  table {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+  }
+
+  @include viewport.desktop {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 0.8rem;
+
+    table {
+      width: 83vw;
+    }
+  }
+
+  @include viewport.mobile {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+
+    table {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

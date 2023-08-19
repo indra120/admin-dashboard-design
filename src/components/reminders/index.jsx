@@ -1,11 +1,13 @@
+import { MdNotificationsNone } from 'react-icons/md'
 import { Notification } from './notification'
+import styles from '@/styles/reminders.module.scss'
 
 export function Reminders() {
   return (
-    <div className="reminders">
-      <div className="header">
+    <div className={styles.reminders}>
+      <div className={styles.header}>
         <h2>Reminders</h2>
-        <span className="material-icons-sharp">notifications_none</span>
+        <MdNotificationsNone/>
       </div>
 
       <Notification title="Workshop" time="08:00 AM - 12:00 PM" />
