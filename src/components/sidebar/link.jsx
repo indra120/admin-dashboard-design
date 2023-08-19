@@ -2,7 +2,7 @@ import styles from '@/styles/sidebar.module.scss'
 
 /**
  * @param {Object} props
- * @param {(string|URL)} props.href
+ * @param {(string|URL)} [props.href]
  * @param {string} props.title
  * @param {boolean} [props.active=false]
  * @param {import("react-icons").IconType} props.icon

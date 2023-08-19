@@ -12,7 +12,12 @@ export function SidebarToggle() {
         </h2>
       </section>
 
-      <button className={styles.close} id="close-btn">
+      <button
+        className={styles.close}
+        onClick={() => {
+          document.querySelector('aside').style.display = 'none'
+        }}
+      >
         <MdClose />
       </button>
     </div>
