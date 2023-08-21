@@ -14,3 +14,27 @@ import logo from '@/assets/vue.svg'
     </button>
   </div>
 </template>
+
+<style scoped>
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+.logo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.close {
+  padding-right: 1rem;
+  display: none;
+}
+</style>
