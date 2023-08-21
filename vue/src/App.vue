@@ -1,10 +1,15 @@
 <script setup>
 import Sidebar from '@/components/Sidebar.vue'
+import Analytics from './components/Analytics.vue'
 </script>
 
 <template>
   <div class="container">
     <Sidebar />
+
+    <main>
+      <Analytics />
+    </main>
   </div>
 </template>
 
