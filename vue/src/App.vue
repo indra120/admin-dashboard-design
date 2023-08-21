@@ -1,6 +1,7 @@
 <script setup>
 import Sidebar from '@/components/Sidebar.vue'
 import Analytics from './components/Analytics.vue'
+import NewUser from './components/NewUser.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Analytics from './components/Analytics.vue'
 
     <main>
       <Analytics />
+      <NewUser />
     </main>
   </div>
 </template>
