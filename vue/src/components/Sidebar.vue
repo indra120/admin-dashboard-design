@@ -23,3 +23,33 @@ import SidebarToggle from './SidebarToggle.vue'
     </section>
   </aside>
 </template>
+
+<style scoped lang="scss">
+aside {
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  height: 88vh;
+  position: relative;
+  top: 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.message-count {
+  background-color: var(--color-danger);
+  padding: 2px 6px;
+  color: var(--color-white);
+  font-size: 11px;
+  border-radius: var(--border-radius-1);
+}
+</style>
