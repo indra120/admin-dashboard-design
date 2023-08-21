@@ -6,7 +6,7 @@ import logo from '@/assets/vue.svg'
   <div class="toggle">
     <section class="logo">
       <img :src="logo" alt="" />
-      <h2>Vue<span class="success">JS</span></h2>
+      <h2>Vue<span class="primary">JS</span></h2>
     </section>
 
     <button class="close">

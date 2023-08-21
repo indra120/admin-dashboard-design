@@ -11,7 +11,7 @@ import SidebarToggle from './SidebarToggle.vue'
       <SidebarLink title="Dashboard" icon="dashboard" />
       <SidebarLink title="Users" icon="person-outlined" />
       <SidebarLink title="History" icon="receiptlong" />
-      <SidebarLink title="Analytics" icon="insights" />
+      <SidebarLink title="Analytics" icon="insights" active />
       <SidebarLink title="Tickets" icon="mailoutline">
         <span class="message-count">69</span>
       </SidebarLink>
@@ -46,7 +46,7 @@ aside {
 }
 
 .message-count {
-  background-color: var(--color-danger);
+  background-color: var(--color-primary);
   padding: 2px 6px;
   color: var(--color-white);
   font-size: 11px;

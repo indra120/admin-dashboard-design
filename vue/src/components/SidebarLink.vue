@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <a :href="href" class="link" :class="active">
+  <a :href="href" class="link" :class="{ active }">
     <v-icon :name="'md-' + icon" />
     <h3>{{ title }}</h3>
     <slot />

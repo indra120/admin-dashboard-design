@@ -21,4 +21,8 @@ import Analytics from './components/Analytics.vue'
   gap: 1.8rem;
   grid-template-columns: 12rem auto 23rem;
 }
+
+main {
+  margin-top: 1.4rem;
+}
 </style>
