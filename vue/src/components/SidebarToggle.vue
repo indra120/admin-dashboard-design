@@ -15,7 +15,9 @@ import logo from '@/assets/vue.svg'
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use '../viewport' as vp;
+
 .toggle {
   display: flex;
   align-items: center;
@@ -36,5 +38,26 @@ img {
 .close {
   padding-right: 1rem;
   display: none;
+}
+
+@include vp.desktop {
+  .logo h2 {
+    display: none;
+  }
+}
+
+@include vp.mobile {
+  .logo {
+    margin-left: 1rem;
+
+    h2 {
+      display: inline;
+    }
+  }
+
+  .close {
+    display: inline-block;
+    cursor: pointer;
+  }
 }
 </style>

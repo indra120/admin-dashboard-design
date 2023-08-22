@@ -1,3 +1,4 @@
+@use './viewport.scss' as vp;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -98,17 +99,17 @@ b {
 }
 
 .primary {
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 .danger {
-  color: var(--color-danger);
+  color: var(--color-danger) !important;
 }
 
 .success {
-  color: var(--color-success);
+  color: var(--color-success) !important;
 }
 
 .warning {
-  color: var(--color-warning);
+  color: var(--color-warning) !important;
 }

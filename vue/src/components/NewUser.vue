@@ -25,3 +25,27 @@ const users = [
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+.new-users {
+  margin-top: 1.3rem;
+}
+
+.user-list {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+</style>
