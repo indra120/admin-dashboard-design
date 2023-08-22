@@ -52,3 +52,34 @@ const orders = [
     <a href="#">Show All</a>
   </div>
 </template>
+
+<style scoped lang="scss">
+.recent-orders {
+  margin-top: 1.3rem;
+}
+
+h2 {
+  margin-bottom: 0.8rem;
+}
+
+table {
+  background-color: var(--color-white);
+  width: 100%;
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--card-border-radius);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
+}
+</style>

@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   name: String,
-  number: Number,
+  number: String,
   paymentStatus: String,
   status: String,
 })
@@ -26,3 +26,15 @@ defineProps({
     <td class="primary">Details</td>
   </tr>
 </template>
+
+<style scoped>
+td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+tr:last-child td {
+  border: none;
+}
+</style>
