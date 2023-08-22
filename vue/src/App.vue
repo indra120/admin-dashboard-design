@@ -34,4 +34,8 @@ import Navbar from './components/Navbar.vue'
 main {
   margin-top: 1.4rem;
 }
+
+.right-section {
+  margin-top: 1.4rem;
+}
 </style>
