@@ -15,7 +15,10 @@ addIcons(
   Icon.MdSettings,
   Icon.MdAdd,
   Icon.MdLogout,
-  Icon.MdClose
+  Icon.MdClose,
+  Icon.MdDarkmode,
+  Icon.MdLightmode,
+  Icon.MdMenu
 )
 
 createApp(App).component('v-icon', OhVueIcon).mount('#app')

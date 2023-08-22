@@ -2,7 +2,8 @@
 import Sidebar from '@/components/Sidebar.vue'
 import Analytics from './components/Analytics.vue'
 import NewUser from './components/NewUser.vue'
-import RecentOrders from './components/RecentOrders.vue';
+import RecentOrders from './components/RecentOrders.vue'
+import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
@@ -14,6 +15,10 @@ import RecentOrders from './components/RecentOrders.vue';
       <NewUser />
       <RecentOrders />
     </main>
+
+    <div class="right-section">
+      <Navbar />
+    </div>
   </div>
 </template>
 
