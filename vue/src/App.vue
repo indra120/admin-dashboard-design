@@ -4,6 +4,7 @@ import Analytics from './components/Analytics.vue'
 import NewUser from './components/NewUser.vue'
 import RecentOrders from './components/RecentOrders.vue'
 import Navbar from './components/Navbar.vue'
+import UserProfile from './components/UserProfile.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import Navbar from './components/Navbar.vue'
 
     <div class="right-section">
       <Navbar />
+      <UserProfile />
     </div>
   </div>
 </template>
