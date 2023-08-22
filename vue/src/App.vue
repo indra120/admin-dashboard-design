@@ -5,6 +5,7 @@ import NewUser from './components/NewUser.vue'
 import RecentOrders from './components/RecentOrders.vue'
 import Navbar from './components/Navbar.vue'
 import UserProfile from './components/UserProfile.vue'
+import Reminders from './components/Reminders.vue'
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import UserProfile from './components/UserProfile.vue'
     <div class="right-section">
       <Navbar />
       <UserProfile />
+      <Reminders />
     </div>
   </div>
 </template>
