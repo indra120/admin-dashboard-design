@@ -22,7 +22,8 @@ addIcons(
   Icon.MdEdit,
   Icon.MdMorevert,
   Icon.MdVolumeup,
-  Icon.MdNotificationsnone
+  Icon.MdNotificationsnone,
+  Icon.MdMorevert
 )
 
 createApp(App).component('v-icon', OhVueIcon).mount('#app')

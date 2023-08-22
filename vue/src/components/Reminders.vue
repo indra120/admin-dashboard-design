@@ -14,3 +14,23 @@ import Notification from './Notification.vue'
     <Notification add-reminder />
   </div>
 </template>
+
+<style scoped lang="scss">
+.reminders {
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+
+  svg {
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    border-radius: 50%;
+  }
+}
+</style>
