@@ -16,7 +16,7 @@
       </div>
 
       <div class="profile-photo">
-        <img src="images/profile-1.jpg" />
+        <img src="https://avatars.githubusercontent.com/u/70420074?v=4" />
       </div>
     </div>
   </div>
