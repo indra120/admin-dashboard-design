@@ -1,6 +1,12 @@
+<script setup>
+function openSidebar() {
+  document.querySelector('aside').style.display = 'block'
+}
+</script>
+
 <template>
   <div class="navbar">
-    <button id="menu-btn">
+    <button @click="openSidebar">
       <v-icon name="md-menu" />
     </button>
 
