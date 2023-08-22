@@ -27,11 +27,20 @@ defineProps({
   </tr>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use '../viewport' as vp;
+
 td {
   height: 2.8rem;
   border-bottom: 1px solid var(--color-light);
   color: var(--color-dark-variant);
+
+  @include vp.desktop {
+    &:last-child,
+    &:first-child {
+      display: none;
+    }
+  }
 }
 
 tr:last-child td {

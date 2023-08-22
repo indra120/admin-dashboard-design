@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+import './style.scss'
 import App from './App.vue'
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
 import * as Icon from 'oh-vue-icons/icons/md'

@@ -25,8 +25,28 @@ import SidebarToggle from './SidebarToggle.vue'
 </template>
 
 <style scoped lang="scss">
+@use '../viewport' as vp;
+
 aside {
   height: 100vh;
+
+  @include vp.mobile {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 15rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    left: -100%;
+    display: none;
+    animation: showMenu 0.4s ease forwards;
+
+    @keyframes showMenu {
+      to {
+        left: 0;
+      }
+    }
+  }
 }
 
 .sidebar {

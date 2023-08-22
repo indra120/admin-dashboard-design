@@ -26,7 +26,9 @@ import Reminders from './components/Reminders.vue'
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use './viewport' as vp;
+
 .container {
   display: grid;
   width: 96%;
@@ -41,5 +43,30 @@ main {
 
 .right-section {
   margin-top: 1.4rem;
+}
+
+@include vp.desktop {
+  .container {
+    width: 95%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+}
+
+@include vp.mobile {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 0 var(--padding-1);
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  .right-section {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
 }
 </style>

@@ -19,6 +19,8 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
+@use '../viewport' as vp;
+
 .link {
   display: flex;
   align-items: center;
@@ -65,6 +67,37 @@ defineProps({
   svg {
     color: var(--color-primary);
     margin-left: calc(1rem - 3px);
+  }
+}
+
+@include vp.desktop {
+  h3 {
+    display: none;
+  }
+
+  .link {
+    width: 5.6rem;
+
+    &:last-child {
+      position: relative;
+      margin-top: 1.8rem;
+    }
+  }
+}
+
+@include vp.mobile {
+  h3 {
+    display: inline;
+  }
+
+  .link {
+    width: 100%;
+    height: 3.4rem;
+
+    &:last-child {
+      position: absolute;
+      bottom: 5rem;
+    }
   }
 }
 </style>

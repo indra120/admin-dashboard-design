@@ -26,11 +26,18 @@ import AnalyticItem from './AnalyticItem.vue'
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use '../viewport' as vp;
+
 .analytics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
+
+  @include vp.desktop {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 </style>
 

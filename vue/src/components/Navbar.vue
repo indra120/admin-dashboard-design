@@ -23,6 +23,8 @@
 </template>
 
 <style scoped lang="scss">
+@use '../viewport' as vp;
+
 .navbar {
   display: flex;
   justify-content: end;
@@ -70,5 +72,44 @@
   background-color: var(--color-primary);
   color: white;
   border-radius: var(--border-radius-1);
+}
+
+@include vp.mobile {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 0 var(--padding-1);
+    height: 4.6rem;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem var(--color-light);
+    margin: 0;
+
+    button {
+      display: inline-block;
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--color-dark);
+      position: absolute;
+      left: 1rem;
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .dark-mode {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+
+  .profile .info {
+    display: none;
+  }
 }
 </style>

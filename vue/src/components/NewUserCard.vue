@@ -14,12 +14,22 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use '../viewport' as vp;
+
 .user-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include vp.desktop {
+    flex-basis: 40%;
+  }
+
+  @include vp.mobile {
+    flex-basis: 35%;
+  }
 }
 
 img {

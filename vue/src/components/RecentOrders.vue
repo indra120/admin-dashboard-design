@@ -54,8 +54,33 @@ const orders = [
 </template>
 
 <style scoped lang="scss">
+@use '../viewport' as vp;
+
 .recent-orders {
   margin-top: 1.3rem;
+
+  @include vp.desktop {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 0.8rem;
+
+    table {
+      width: 83vw;
+    }
+  }
+
+  @include vp.mobile {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+
+    table {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }
 
 h2 {
