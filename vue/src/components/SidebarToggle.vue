@@ -1,5 +1,9 @@
 <script setup>
 import logo from '@/assets/vue.svg'
+
+function closeSidebar() {
+  document.querySelector('aside').style.display = 'none'
+}
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import logo from '@/assets/vue.svg'
       <h2>Vue<span class="primary">JS</span></h2>
     </section>
 
-    <button class="close">
+    <button class="close" @click="closeSidebar">
       <v-icon name="md-close" />
     </button>
   </div>
@@ -38,6 +42,7 @@ img {
 .close {
   padding-right: 1rem;
   display: none;
+  background: none;
 }
 
 @include vp.desktop {

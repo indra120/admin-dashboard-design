@@ -1,17 +1,32 @@
+<script setup>
+import { ref } from 'vue'
+
+const darkMode = ref(false)
+
+function openSidebar() {
+  document.querySelector('aside').style.display = 'block'
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode-variables')
+  darkMode.value = !darkMode.value
+}
+</script>
+
 <template>
   <div class="navbar">
-    <button id="menu-btn">
+    <button @click="openSidebar">
       <v-icon name="md-menu" />
     </button>
 
-    <div class="dark-mode">
-      <v-icon name="md-lightmode" class="active" />
-      <v-icon name="md-darkmode" />
+    <div class="dark-mode" @click="toggleDarkMode">
+      <v-icon name="md-lightmode" :class="{ active: !darkMode }" />
+      <v-icon name="md-darkmode" :class="{ active: darkMode }" />
     </div>
 
     <div class="profile">
       <div class="info">
-        <p>Hey, <b>Indra</b></p>
+        <p>Hey, <b>Ryzen</b></p>
         <small class="text-muted">Admin</small>
       </div>
 
