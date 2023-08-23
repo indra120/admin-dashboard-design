@@ -1,4 +1,7 @@
 @use './styles/viewport';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -114,21 +117,7 @@ b {
   color: var(--color-warning);
 }
 
-.container {
-  display: grid;
-  width: 96%;
-  margin: 0 auto;
-  gap: 1.8rem;
-  grid-template-columns: 12rem auto 23rem;
-}
-
-aside {
-  height: 100vh;
-}
-
 main {
-  margin-top: 1.4rem;
-
   table {
     tbody {
       td {
@@ -144,19 +133,15 @@ main {
   }
 }
 
-.right-section {
-  margin-top: 1.4rem;
-}
-
 @include viewport.desktop {
   .container {
     width: 95%;
     grid-template-columns: 7rem auto 23rem;
   }
 
-  main table thead tr {
-    th,
-    td {
+  main table {
+    thead tr th,
+    tbody tr td {
       &:last-child,
       &:first-child {
         display: none;
