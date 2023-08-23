@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,jsx}",
   ],
-  prefix: '$',
+  prefix: '$-',
   theme: {
     extend: {},
   },

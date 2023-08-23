@@ -5,7 +5,7 @@ import * as Icon from 'react-icons/md'
 
 export function Sidebar() {
   return (
-    <aside>
+    <aside className='$-h-[100vh]'>
       <SidebarToggle />
 
       <section className={styles.sidebar}>
