@@ -1,98 +1,38 @@
 @use 'viewport';
 
-.toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1.4rem;
-
-  .logo {
-    display: flex;
-    gap: 0.5rem;
-
-    img {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-
-  .close {
-    padding-right: 1rem;
-    display: none;
-    background: none;
-  }
+.close {
+  background: none;
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-white);
-  box-shadow: var(--box-shadow);
-  border-radius: 15px;
-  height: 88vh;
-  position: relative;
-  top: 1.5rem;
-  transition: all 0.3s ease;
-
   &:hover {
     box-shadow: none;
   }
 
   .link {
-    display: flex;
-    align-items: center;
-    color: var(--color-info-dark);
-    height: 3.7rem;
-    gap: 1rem;
-    position: relative;
-    margin-left: 2rem;
-    transition: all 0.3s ease;
-
-    svg {
-      font-size: 1.6rem;
-      transition: all 0.3s ease;
-    }
-
     &:last-child {
-      position: absolute;
-      bottom: 2rem;
-      width: 100%;
+      @apply $-absolute $-w-full $-bottom-8;
     }
 
     &.active {
-      width: 100%;
-      color: var(--color-primary);
-      background-color: var(--color-light);
-      margin-left: 0;
+      @apply $-w-full $-text-[#6c9bcf] $-bg-[rgba(132,139,200,0.18)] $-ml-0;
 
       &::before {
-        content: '';
-        width: 6px;
-        height: 18px;
-        background-color: var(--color-primary);
+        @apply $-content-[''] $-w-1.5 $-h-[18px] $-bg-[#6c9bcf];
       }
 
       svg {
-        color: var(--color-primary);
-        margin-left: calc(1rem - 3px);
+        @apply $-text-[#6c9bcf] $-ml-[calc(1rem_-_3px)];
       }
     }
 
     &:hover {
-      color: var(--color-primary);
+      color: #6c9bcf;
 
       svg {
         margin-left: 0.6rem;
       }
     }
-  }
-
-  .message-count {
-    background-color: var(--color-danger);
-    padding: 2px 6px;
-    color: var(--color-white);
-    font-size: 11px;
-    border-radius: var(--border-radius-1);
   }
 }
 

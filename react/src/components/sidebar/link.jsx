@@ -10,8 +10,14 @@ import styles from '@/styles/sidebar.module.scss'
  */
 export function SidebarLink({ href = '#', title, active, icon: Icon, children, ...props }) {
   return (
-    <a href={href} className={`${styles.link} ${active ? styles.active : ''}`} {...props}>
-      <Icon />
+    <a
+      href={href}
+      className={`${styles.link} ${
+        active ? styles.active : ''
+      } $-flex $-items-center $-text-[#7d8da1] $-h-[3.7rem] $-gap-4 $-relative $-transition-all $-duration-[0.3s] $-ease-[ease] $-ml-8`}
+      {...props}
+    >
+      <Icon className='$-text-[1.6rem] $-transition-all $-duration-[0.3s] $-ease-[ease]' />
       <h3>{title}</h3>
       {children}
     </a>
