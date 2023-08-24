@@ -133,6 +133,10 @@ main {
   }
 }
 
+.user-profile:hover {
+  box-shadow: none;
+}
+
 @include viewport.desktop {
   .container {
     width: 95%;
