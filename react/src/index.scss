@@ -1,4 +1,4 @@
-@use './styles/viewport';
+@use './styles/viewport' as vp;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -133,11 +133,27 @@ main {
   }
 }
 
+.new-users .user-list {
+  &:hover {
+    @apply $-shadow-none;
+  }
+
+  .user {
+    @include vp.desktop {
+      flex-basis: 40%;
+    }
+
+    @include vp.mobile {
+      flex-basis: 35%;
+    }
+  }
+}
+
 .user-profile:hover {
   box-shadow: none;
 }
 
-@include viewport.desktop {
+@include vp.desktop {
   .container {
     width: 95%;
     grid-template-columns: 7rem auto 23rem;
@@ -154,7 +170,7 @@ main {
   }
 }
 
-@include viewport.mobile {
+@include vp.mobile {
   .container {
     width: 100%;
     grid-template-columns: 1fr;
